@@ -716,11 +716,14 @@ showReleases();
 const securityCaseButton = document.querySelector(".security-case__button");
 const securityCaseBlock2 = document.querySelector(".security-case__block-2");
 securityCaseButton.addEventListener("click", () => {
-  securityCaseBlock2.style.display = securityCaseBlock2.style.display
-    ? null
-    : "none";
+  // securityCaseBlock2.style.display = securityCaseBlock2.style.display
+  //   ? null
+  //   : "none";
 
-  securityCaseButton.textContent = securityCaseBlock2.style.display
-    ? "Show more cases"
-    : "Show less cases";
+  // securityCaseButton.textContent = securityCaseBlock2.style.display
+  //   ? "Show more cases"
+  //   : "Show less cases";
+
+  securityCaseBlock2.style.display = "block";
+  securityCaseButton.style.display = "none";
 });
