@@ -3019,10 +3019,8 @@ body._lock-scroll {
 .services-card__icon {
   border-radius: 50%;
   padding: 18px;
-  <<<<<<< HEAD background-color: #EB3A3A;
-  =======background-color: #eb3a3a;
+  background-color: #EB3A3A;
   margin-bottom: 24px;
-  >>>>>>>ed0a053fee32f246b1346a58bd677cdb73ab3fa4
 }
 
 .services-card__title {
