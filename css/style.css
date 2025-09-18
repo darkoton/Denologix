@@ -3477,7 +3477,23 @@ body._lock-scroll {
   #dx_rds_half_block_text_2 {
     background-position: 10% 0;
   }
+
+  #dx_rds_block_wrapper {
+    height: auto;
+  }
 }
+
+@media (max-width: 1170px) {
+  .dx_rds_half_block_text_2_title {
+    font-size: calc(22px + 10 * ((100vw - 320px) / 850));
+  }
+
+  .dx_rds_half_block_text_2_desc {
+    font-size: calc(14px + 2 * ((100vw - 320px) / 850));
+
+  }
+}
+
 
 
 .administration__body {
@@ -3618,14 +3634,19 @@ body._lock-scroll {
   }
 
   .administration__tab-body {
-    padding: calc(20px + 20 * ((100vw - 320px) / 850)) 0;
+    padding: calc(15px + 5 * ((100vw - 320px) / 850)) 0;
   }
 
   .administration__tab {
-    font-size: calc(28px + 4 * ((100vw - 320px) / 850));
+    font-size: calc(16px + 16 * ((100vw - 320px) / 850));
     line-height: calc(31px + 4.2 * ((100vw - 320px) / 850));
-    padding-top: calc(8px + 4 * ((100vw - 320px) / 850));
+    padding-top: calc(4px + 6 * ((100vw - 320px) / 850));
     border-top-width: calc(3px + 3 * ((100vw - 320px) / 850));
+  }
+
+  .administration__tab::after {
+    border-top-width: 16px solid #EEEEEE;
+    border-right-width: 16px solid transparent;
   }
 
   .administration__text {
@@ -3636,7 +3657,11 @@ body._lock-scroll {
 
   .administration__card-desc {
     font-size: calc(14px + 2 * ((100vw - 320px) / 850));
-    line-height: calc(30px + 2 * ((100vw - 320px) / 850));
+    line-height: calc(15px + 17 * ((100vw - 320px) / 850));
+  }
+
+  .administration__block {
+    padding: calc(20px + 20 * ((100vw - 320px) / 850));
   }
 }
 
@@ -3690,4 +3715,16 @@ body._lock-scroll {
   .support__desc {
     font-size: calc(14px + 2 * ((100vw - 320px) / 850));
   }
+}
+
+.content-block__text-block-database {}
+
+@media (min-width: 1440.2px) {
+  .content-block__body:not(.content-block__body_reverse) .content-block__text-block-database {
+    padding: 40px 0px 40px 40px;
+  }
+}
+
+.content-block__text-block-database .content-block__image img {
+  width: 100%;
 }
