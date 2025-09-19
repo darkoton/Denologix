@@ -510,6 +510,10 @@ function myTabs() {
       if (elementTarget.closest("[data-tab-btn]")) {
         const att = elementTarget.getAttribute("data-tab-btn");
         const modernAtt = `[data-tab="${att}"]`;
+        const blockTarget = elementTarget
+          .closest("[data-tabs]")
+          .querySelector(`${modernAtt}`)
+
 
         elementTarget
           .closest("[data-tabs]")
@@ -522,12 +526,20 @@ function myTabs() {
         const buttons = elementTarget
           .closest("[data-tabs]")
           .querySelectorAll("[data-tab-btn]");
+        const blocks = elementTarget
+          .closest("[data-tabs]")
+          .querySelectorAll("[data-tab]");
 
+        blocks.forEach((blocks) => {
+          blocks.classList.remove("_active");
+        })
         buttons.forEach((button) => {
           button.classList.remove("_active");
         });
         elementTarget.classList.add("_active");
-
+        setTimeout(() => {
+          blockTarget.classList.add('_active')
+        }, 100);
         const tabs = elementTarget
           .closest("[data-tabs]")
           .querySelectorAll("[data-tab]");
@@ -594,7 +606,6 @@ new WOW({
   mobile: false,
   offset: 80,
 }).init();
-
 let isMobile = {
   Android: function () {
     return navigator.userAgent.match(/Android/i);
