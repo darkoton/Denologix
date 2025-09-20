@@ -3558,6 +3558,7 @@ body._lock-scroll {
   color: #0277BD;
   border-color: #0277BD;
   transition: all 0.3s ease 0s;
+  pointer-events: none;
 }
 
 @media (any-hover:hover) {
@@ -3597,7 +3598,7 @@ body._lock-scroll {
   display: none;
   padding: 40px;
   transform: scale(0);
-  transition: all 1.2s ease-out 0s;
+  transition: all 0.8s ease-out 0s;
   opacity: 0;
 }
 
